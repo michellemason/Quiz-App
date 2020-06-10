@@ -1,0 +1,157 @@
+body {
+    font-family: "Arial";
+    color: #111D4A;
+    font-weight: bold;
+    background-image: url("https://i.pinimg.com/originals/72/ea/6d/72ea6d3f745f02fc15eff5da56fff0bf.jpg");
+    height: auto;
+    max-width: 100%;
+    background-size: cover;
+    
+}
+
+header {
+    height:50px;
+    font-size: 18px;
+    color: #111D4A;
+    margin-bottom: 70px;
+}
+
+header h1 {
+    line-height: 1;
+    top: 50px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 30px 90px 10px 90px;
+    border-radius: 10px;
+}
+
+
+.container {
+    max-width: 1000px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0 auto; 
+}
+
+header .question-and-score {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.question-and-score ul {
+    font-weight: bold;
+    text-align:center;
+    color: #111D4A;
+    width: 80%;
+    margin: 0 auto 400px;
+    padding-left: 2%;
+    padding-right: 2%;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+
+.question-and-score li {
+    display: inline-block;
+}
+
+fieldset {
+    width:80%;
+    padding: 40px;
+    margin:0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+
+legend {
+    font-weight: 700;
+    font-size: 20px;
+}
+  
+.question-form .question {
+    margin-bottom: 20px;
+    padding: 0 2%;
+    font-weight: 600px;
+}
+  
+.options ul {
+    list-style: none;
+    margin:0;
+    text-align:left;
+    font-size: 20px;
+}
+
+button {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: beige;
+    background: #111D4A;
+    border: 10px;
+    border-radius: 4px;
+    padding: 10px 20px;
+}
+
+#restart {
+    display: center;
+    margin-top: 15px;
+    width: 200px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: beige;
+    background: #111D4A;
+    border: 10px;
+    border-radius: 4px;
+    padding: 10px 20px;   
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+}
+  
+.options span {
+    display:block;
+    border-radius:5px;
+}
+  
+.right-answer {
+   background:beige;
+   padding: 10px 20px;
+   margin: 5px 20px;
+   border:2px solid #111D4A;
+}
+  
+.wrong-answer {
+    background:beige;
+    padding: 10px;
+    margin: 5px 20px;
+    border:2px solid darkred;
+}
+
+.question-form button {
+    float:right;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .container {
+    max-width: 1000px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+  }
+  
+  
+  .box {
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 700px) {
+    .box {
+      width: 100%;
+    }
+  }
+  
