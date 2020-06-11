@@ -30,10 +30,8 @@ function currentOptions() {
     }
 }
 
-// displays the current question
-function renderQuestion() {
-    let question = STORE.questions[STORE.currentQuestion];
-    updateQuestionAndScore();
+// displays the html for questions
+function generateQuestionForm (question) {
     const questionForm = $(`
     <div>
         <form id="js-questions" class="question-form">
@@ -59,13 +57,21 @@ function renderQuestion() {
         </fieldset>
         </form>
     </div>`);
-$("main").html(questionForm);
-currentOptions();
-$("#next-question").hide();
+    return questionForm;
 }
 
-// displays results and start over button
-function displayResults() {
+// displays the questions
+function renderQuestion() {
+    let question = STORE.questions[STORE.currentQuestion];
+    let questionForm = generateQuestionForm(question);
+    updateQuestionAndScore();   
+    $("main").html(questionForm);
+    currentOptions();
+    $("#next-question").hide();
+}
+
+// displays html for results
+function generateResultsTemplate() {
     let resultsForm = $(`
     <div class="results">
     <form id="js-restart">
@@ -84,10 +90,16 @@ function displayResults() {
         </fieldset>
     </form>
     </div>`);
+    return resultsForm;
+}
+
+// displays results
+function displayResults() {
+    let resultsForm = generateResultsTemplate();
     STORE.currentQuestion = 0;
     STORE.score = 0;
 $("main").html(resultsForm);
-}
+} 
 
 // checks if at end of questions
 function handleQuestions() {
@@ -138,8 +150,6 @@ function handleQuiz() {
     handleQuestions();
     handleSelected();
     restartQuiz();
-    //updateQuestionAndScore();
-    currentOptions();
 
 }
 
